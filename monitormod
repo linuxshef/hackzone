@@ -1,0 +1,9 @@
+sudo systemctl stop NetworkManager
+sudo airmon-ng check kill
+sudo ip link set <ИНТЕРФЕЙС> down
+sudo iw <ИНТЕРФЕЙС> set monitor control
+sudo ip link set <ИНТЕРФЕЙС> up
+sudo ip link set wlan0 down
+sudo iw wlan0 set monitor control
+sudo ip link set wlan0 up
+sudo airodump-ng -c КАНАЛ --bssid MAC_АДРЕС -w ФАЙЛ ИНТЕРФЕЙС
