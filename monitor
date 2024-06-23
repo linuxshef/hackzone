@@ -1,0 +1,28 @@
+#!/bin/bash
+clear
+ echo -e "
+
+      \t         ON (   1   )  "
+
+    echo -e "
+
+      \t         OFF (   2   )  "
+
+    echo -n "
+
+                 -> Введите значение : "
+
+      read main_menu
+      case "$main_menu" in
+         "1" ) clear ;
+sudo systemctl stop NetworkManager
+sudo ifconfig wlp0s21f0u4i2 down
+sudo iw wlp0s21f0u4i2 set monitor control
+sudo ifconfig wlp0s21f0u4i2 up
+           ;;
+         "2" ) clear ;
+sudo ifconfig wlp0s21f0u4i2 down
+sudo iw wlp0s21f0u4i2 set type managed
+sudo ifconfig wlp0s21f0u4i2 up
+sudo systemctl start NetworkManager
+      esac
