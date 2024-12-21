@@ -1,9 +1,9 @@
- !#/bin/bash
- sudo pacman -Sy wget --noconfirm
- wget https://blackarch.org/strap.sh ; chmod +x strap.sh
- sudo ./strap.sh
- sudo pacman -Syyu --noconfirm
- echo '
+#!/bin/bash
+sudo pacman -Sy wget --noconfirm
+wget https://blackarch.org/strap.sh ; chmod +x strap.sh
+sudo ./strap.sh
+sudo pacman -Syyu --noconfirm
+echo '
 
 
           Done ! 
