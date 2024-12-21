@@ -17,6 +17,8 @@ clear
       case "$main_menu" in
          "1" ) clear ;
 sudo systemctl stop NetworkManager
+sudo systemctl stop avahi-daemon
+sudo systemctl stop wpa_supplicant
 sudo ifconfig $device down
 sudo iw $device set monitor control
 sudo ifconfig $device up
@@ -26,4 +28,6 @@ sudo ifconfig $device down
 sudo iw $device set type managed
 sudo ifconfig $device up
 sudo systemctl start NetworkManager
+sudo systemctl start avahi-daemon
+sudo systemctl start wpa_supplicant
       esac
