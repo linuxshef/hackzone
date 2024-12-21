@@ -1,5 +1,5 @@
 #!/bin/bash
-device=""
+device="wlp2s0u5"
 clear
  echo -e "
 
@@ -17,13 +17,13 @@ clear
       case "$main_menu" in
          "1" ) clear ;
 sudo systemctl stop NetworkManager
-sudo ifconfig wlp0s21f0u4i2 down
-sudo iw wlp0s21f0u4i2 set monitor control
-sudo ifconfig wlp0s21f0u4i2 up
+sudo ifconfig $device down
+sudo iw $device set monitor control
+sudo ifconfig $device up
            ;;
          "2" ) clear ;
-sudo ifconfig wlp0s21f0u4i2 down
-sudo iw wlp0s21f0u4i2 set type managed
-sudo ifconfig wlp0s21f0u4i2 up
+sudo ifconfig $device down
+sudo iw $device set type managed
+sudo ifconfig $device up
 sudo systemctl start NetworkManager
       esac
