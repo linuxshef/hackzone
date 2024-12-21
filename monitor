@@ -17,11 +17,11 @@ clear
       case "$main_menu" in
          "1" ) clear ;
 sudo systemctl stop NetworkManager
-sudo systemctl stop avahi-daemon
-sudo systemctl stop wpa_supplicant
 sudo ifconfig $device down
 sudo iw $device set monitor control
 sudo ifconfig $device up
+sudo systemctl stop avahi-daemon
+sudo systemctl stop wpa_supplicant
            ;;
          "2" ) clear ;
 sudo ifconfig $device down
