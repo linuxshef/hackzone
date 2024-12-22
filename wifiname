@@ -1,0 +1,5 @@
+#!/bin/bash
+device="wlp2s0u5"
+sudo ip link set $device  down
+sudo ip link set $device name wlan0mon
+sudo ip link set wlan0mon up
