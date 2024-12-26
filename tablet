@@ -1,5 +1,5 @@
 #!/bin/bash
-device="wlp2s0u5"
+device="wlp0s20f0u3"
 clear
  echo -e "
 
@@ -16,18 +16,12 @@ clear
       read main_menu
       case "$main_menu" in
          "1" ) clear ;
-sudo systemctl stop NetworkManager
 sudo ifconfig $device down
 sudo iw $device set monitor control
 sudo ifconfig $device up
-sudo systemctl stop avahi-daemon
-sudo systemctl stop wpa_supplicant
            ;;
          "2" ) clear ;
 sudo ifconfig $device down
 sudo iw $device set type managed
 sudo ifconfig $device up
-sudo systemctl start NetworkManager
-sudo systemctl start avahi-daemon
-sudo systemctl start wpa_supplicant
       esac
