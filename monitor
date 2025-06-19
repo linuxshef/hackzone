@@ -1,5 +1,5 @@
 #!/bin/bash
-device="wlp2s0u5"
+device="wlp2s0"
 clear
  echo -e "
 
