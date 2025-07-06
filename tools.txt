@@ -1,2 +1,9 @@
+#- Netcut Linux
 https://github.com/a-atalla/tuxcut
 https://github.com/cdes5804/NetCut
+
+#- NetCut Arcai
+
+https://arcai.com/downloads/
+
+#- Arp Spoofing
